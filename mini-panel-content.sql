@@ -1,4 +1,4 @@
-drop temporary table if exists published_content, published_panelizer_nodes;
+drop temporary table if exists published_content, published_panelizer_nodes, panel_info, minis;
 
 /* Get the current published version of the workbench moderated content */
 create temporary table if not exists published_content (
