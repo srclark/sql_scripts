@@ -5,7 +5,7 @@ create temporary table if not exists t1 (select n.nid, nh.vid, pe.did from node 
 left join workbench_moderation_node_history as nh on nh.nid=n.nid
 left join panelizer_entity as pe on pe.entity_id=n.nid and pe.revision_id=nh.vid
 where n.type='responsive_landing_page'
-and (nh.published=1 || nh.current = 1)
+and (nh.published=1 || nh.is_current = 1)
 and pe.did is not null
 order by pe.did);
 
